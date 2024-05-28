@@ -27,7 +27,7 @@ category_prompt = "다음 사용자의 입력에 대해서 사용자는 어떤 �
 messages.append({"role": "user", "content" : category_prompt % category_input})
 
 response = openai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-4o",
     messages=messages
 )
 category = response.choices[0].message.content
@@ -39,7 +39,7 @@ input_prompt = input("(%s 의사) 환자분은 몇살이십니까? > " % categor
 messages.append({"role": "user", "content" : age_prompt % input_prompt})
 
 response = openai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-4o",
     messages=messages
 )
 age = int(response.choices[0].message.content)
@@ -52,7 +52,7 @@ while True:
     messages.append({"role": "user", "content" : gender_prompt % input_prompt})
 
     response = openai.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o",
         messages=messages
     )
     gender = response.choices[0].message.content
@@ -73,7 +73,7 @@ input_prompt = input("(%s 의사) 현재 어떤 증상을 가지고 있습니까
 messages.append({"role": "user", "content" : symptom_prompt % input_prompt})
 
 response = openai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-4o",
     messages=messages
 )
 
@@ -98,7 +98,7 @@ for i in range(0, len(symptom_list)):
     messages.append({"role": "user", "content" : familyship_prompt})
 
     response = openai.chat.completions.create(
-        model="gpt-4-turbo",
+        model="gpt-4o",
         messages=messages
     )
 
@@ -109,7 +109,7 @@ for i in range(0, len(symptom_list)):
         extract_familyship_prompt = "사용자의 입력은 사용자가 가지고 있는 증상에 대한 가족력을 묻는 질문에 대한 응답 내용이야. 가족들 중에 누구에게 이 질병이 있는지 다른 내용 출력하지 말고 '가족 중에 누가 해당 질병을 가지고 있는지 호칭'만 알려줘. 사용자의 입력 : %s" % familyship_input
         messages.append({"role": "user", "content" : extract_familyship_prompt})
         response = openai.chat.completions.create(
-            model="gpt-4-turbo",
+            model="gpt-4o",
             messages=messages
         )
 
@@ -126,7 +126,7 @@ input_prompt = input("(%s 의사) 평소에 앓고 계시는 병이 있습니까
 messages.append({"role": "user", "content" : symptom_prompt % input_prompt})
 
 response = openai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-4o",
     messages=messages
 )
 
@@ -153,7 +153,7 @@ for i in range(0, len(background_list)):
     messages.append({"role": "user", "content" : familyship_prompt})
 
     response = openai.chat.completions.create(
-        model="gpt-4-turbo",
+        model="gpt-4o",
         messages=messages
     )
 
@@ -164,7 +164,7 @@ for i in range(0, len(background_list)):
         extract_familyship_prompt = "사용자의 입력은 기저 질환에서 가족력을 묻는 질문에 대한 응답 내용이야. 가족들 중에 누구에게 이 질병이 있는지 다른 내용 출력하지 말고 '가족 중에 누가 해당 질병을 가지고 있는지 호칭'만 알려줘. 사용자의 입력 : %s" % familyship_input
         messages.append({"role": "user", "content" : extract_familyship_prompt})
         response = openai.chat.completions.create(
-            model="gpt-4-turbo",
+            model="gpt-4o",
             messages=messages
         )
 
