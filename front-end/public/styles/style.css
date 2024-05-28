@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+}
+
+header{
+    padding: 2vh 1vw;
+    background: #ffe900;
+    color: #858585;
+    font-weight: bold;
+}
+
+article{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 2vh 1vw;
+}
+
+.chatbot-view{
+    height: 87vh;
+    padding: 0;
+    border: 2px solid #bfbfbf;
+    display: grid;
+    grid-template-rows: 10fr;
+}
+
+.chatbot-view > .chatting-input-view{
+    border-top: 2px solid #bfbfbf;
+    height: 5vh;
+}
+
+.chatbot-view > .chatting-input-view > input{
+    width: 99%;
+    height: 97%;
+    border: 0;
+}
+
+.chatbot-view > .chatting-logs-view{
+    display: block;
+    padding: 10px 10px;
+    overflow-y: auto;
+    
+}
+
+.chatbot-view > .chatting-logs-view > div{
+    flex-grow: 1;
+    margin : 10px 0;
+    
+}
+
+.chatbot-view > .chatting-logs-view > .me-log{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chatbot-view > .chatting-logs-view > .me-log > div{
+    padding: 10px 20px;
+    background: #e1ebff;
+    border-radius: 15px;
+    max-width: 89%;
+}
+
+.chatbot-view > .chatting-logs-view > .chatbot-log{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.chatbot-view > .chatting-logs-view > .chatbot-log > div{
+    padding: 10px 20px;
+    background: #ffeada;
+    border-radius: 15px;
+    max-width: 89%;
+    
+}
+
+.chatbot-view > .chatting-logs-view > .me-log > div > p{
+    text-align: end;
+}
+
+.chatbot-view > .chatting-logs-view > div > div > p{
+    width: 100%;
+    white-space: initial;
+    word-wrap: break-word
+}

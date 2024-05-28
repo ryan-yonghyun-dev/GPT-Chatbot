@@ -1,6 +1,15 @@
 import os
 import openai
 import json
+from typing import Union
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/chatbot")
+def getChatbotAnswer(question_id : int, user_input : str):
+    print(question_id, user_input)
 
 openai.api_key = os.environ.get("OPENAI_API_KEY")
 
